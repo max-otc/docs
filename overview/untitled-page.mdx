@@ -1,0 +1,115 @@
+---
+title: "DAO and Governance Framework"
+---
+
+IndexMaker is a decentralized protocol designed to build and manage on-chain index portfolios.
+
+While we are organized as a **Limited Liability Company (LLC) in the Republic of the Marshall Islands**, we are governed by a decentralized community. Our goal is operational efficiency and meritocracy, avoiding the centralization traps common in traditional organizations.
+
+This document outlines how the **IndexMaker Master DAO LLC** and its associated Series operate.
+
+---
+
+## 1. Key Concepts & Definitions
+
+Before diving into the rules, here are the core terms we use to run the DAO:
+
+- **Sortition:** The process of randomly selecting people for governance roles. We use this to prove that management is "fungible" (replaceable) and doesn't rely on specific "special" individuals.
+- **Goldilocks Algorithm:** A specific math formula we use to pick our supervisory committee. It balances fairness and security to ensure no one can game the system to guarantee they get picked.
+- **Elected DAO:** The supervisory committee selected by the Goldilocks Algorithm. They oversee operations and Curators.
+- **Curator:** The person or entity managing the strategy (methodology) of a specific Index Series.
+- **Issuer Network:** The decentralized group of node operators that actually execute the transactions and enforce rules.
+
+---
+
+## 2. The General Assembly (Token Holders)
+
+The General Assembly is the ultimate authority of the DAO. It consists of everyone holding Governance Tokens.
+
+### Voting Power
+
+- **Weight:** Your vote is weighted by the number of tokens you hold.
+- **Staking:** Where applicable, voting power can also come from USDC deposited into the governance staking contract.
+
+### Powers
+
+The General Assembly holds the sovereign power to:
+
+- **Change the Constitution:** Ratify or reject amendments to this document.
+- **Manage the Network:** Elect or fire members of the Issuer Network.
+- **Set Criteria:** Decide who is allowed into the "Eligibility Pool" for leadership roles.
+- **The Nuclear Option:** Initiate a **"Vote of No Confidence"** to immediately dissolve the current Elected DAO and trigger a new random selection.
+
+### Real Rights (Anti-Illusory Provision)
+
+We are compliant with the principles of _Williamson v. Tucker_ and _SEC v. Merchant Capital_. This means your voting rights are real, not just for show. We guarantee:
+
+- **Notice:** You will get detailed information and sufficient notice regarding proposals.
+- **Neutrality:** Default voting rules will never favor the incumbent management.
+- **Ability to Fire:** You have the practical ability to remove any Curator or Elected DAO member via a majority vote.
+
+---
+
+## 3. The Elected DAO & Goldilocks Sortition
+
+The Elected DAO is a group of **15–20 members**.
+
+**Important:** Their job is _not_ to create policy. Their job is to supervise execution, ensure Curators follow the rules, and instruct the Issuer Network on sensitive parameters.
+
+### Getting into the "Eligibility Pool"
+
+To be eligible for the Elected DAO, you must be admitted to the pool by meeting three requirements:
+
+- **Proof of Skill:** Pass the Governance and Compliance Certification (covering smart contract safety, financial risk, and regulations).
+- **Stake at Risk:** Deposit collateral. If you act maliciously, you lose this money (slashing).
+- **Identity Verification:** You must prove your identity for legal accountability, though you may remain pseudonymous to the public where allowed.
+
+### The Selection Process (Goldilocks Mechanism)
+
+We don't hold popularity contests. We select the Elected DAO from the pool using the **Goldilocks Algorithm**:
+
+- **Fairness:** Every qualified member has a real, non-negligible chance of being picked. No exclusionary cliques allowed.
+- **Manipulation Resistant:** The algorithm caps the maximum probability of selection. This stops "Sybil attacks" (one person pretending to be many) or gaming the criteria.
+- **Verifiable:** The selection happens on-chain using a **Verifiable Random Function (VRF)** so anyone can audit the results.
+
+### Terms & Limits
+
+- **Fixed Term:** Members serve for a set period (e.g., 6 months).
+- **No Incumbency:** Once a term ends, a new Sortition event happens. Consecutive terms are prohibited to prevent power entrenchment.
+
+---
+
+## 4. Series Governance & Curators
+
+The Master DAO can create new "Series" for each Index Token. Legally, each Series is a **distinct liability cell**.
+
+### The Curator Role
+
+Each Series is managed by a Curator.
+
+- **Responsibility:** They propose the basket of assets and rebalancing weights based on the Index Methodology.
+- **Selection:** Any Member can propose a Curator, but they must be approved by the Elected DAO.
+- **Removal:** Curators serve at the pleasure of the DAO. They can be removed by a General Assembly vote or by the Elected DAO (for cause).
+
+### Safety Limitations
+
+To keep funds safe, **Curators never have custody of assets.**
+
+- They can only submit "rebalancing proposals" to the smart contract.
+- These proposals are validated by the Issuer Network against pre-defined logic.
+- If the proposal violates the methodology, it is rejected. A Curator cannot misappropriate funds.
+
+---
+
+## 5. The Issuer Network
+
+The Issuer Network is the technical execution layer, made up of independent validator nodes elected by the General Assembly.
+
+### Responsibilities
+
+- **Execution:** They cryptographically sign and execute transactions approved by governance.
+- **Compliance Guardrails:** They are mandated to block any transaction that violates the Protocol's **"Blacklist"** (OFAC sanctions) or **"Hard Cap"** (risk limits).
+
+### Random Leader Election
+
+To prevent collusion, no single node is always in charge. For every epoch, we use a **Random Leader Election** process to decide which node proposes the block or executes the batch of transactions.

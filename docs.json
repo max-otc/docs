@@ -9,79 +9,41 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "tabs": [
-      {
-        "tab": "Guides",
-        "groups": [
-          {
-            "group": "Getting started",
-            "pages": [
-              "index",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
-          }
-        ]
-      }
-    ],
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Github",
+          "icon": "airplay",
+          "href": "https://github.com/orgs/IndexMaker/repositories"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "App",
+          "href": "https://app.indexmaker.global/"
+        },
+        {
+          "anchor": "Website",
+          "icon": "newspaper",
+          "href": "https://www.indexmaker.global/"
         }
       ]
-    }
+    },
+    "tabs": [
+      {
+        "tab": "Overview",
+        "pages": [
+          "overview/index-maker-standard-the-structure",
+          "overview/untitled-page",
+          "overview/untitled-page-1"
+        ]
+      },
+      {
+        "tab": "Legal",
+        "pages": [
+          "legal/terms-of-service",
+          "legal/privacy-policy"
+        ]
+      }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",

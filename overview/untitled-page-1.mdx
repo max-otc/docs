@@ -1,0 +1,90 @@
+---
+title: "Operational & Custodial Architecture"
+---
+
+This document outlines how the **IndexMaker DAO** (the Protocol), the **Authorized Participants** (the Custodians), and the **Issuer Network** (the Validators) work together.
+
+The goal of this architecture is **separation of duties**. We designed the system so that no single entity has the power to both direct funds and move them. This prevents single points of failure and keeps us compliant.
+
+## 1. Authorized Participant (AP) Operations
+
+The Authorized Participant (AP) acts as the bridge to the external market. They are an independent service provider, not an agent or general partner of the DAO.
+
+### Legal Status
+
+- **Structure:** The AP is a corporate entity.
+- **Jurisdiction:** Incorporated in a jurisdiction that allows proprietary digital asset trading and custody (initially Panama).
+
+### How Custody Works
+
+The AP manages "Designated Accounts" at third-party exchanges (like Bitget or Binance) and "Cold Storage Wallets." To keep assets safe, they follow these strict rules:
+
+- **Segregation:** Protocol assets are kept strictly separate from the AP’s own company funds.
+- **MPC Infrastructure:** We use Multi-Party Computation (MPC) for security.
+- **No Unilateral Moves:** The private key shares are distributed. The AP cannot withdraw funds alone; they require a cryptographic signature from the Issuer Network or the Elected DAO to move anything.
+
+### The Minting & Redemption Workflow
+
+Here is the step-by-step flow for creating (Minting) or destroying (Redeeming) Index Tokens:
+
+1. **User Request:** A user deposits Stablecoins (USDC) into the Protocol via the interface.
+2. **Validation:** The Issuer Network verifies the deposit and checks the current Index composition.
+3. **Execution Signal:** The Protocol triggers an on-chain event telling the AP to buy the underlying assets.
+4. **Asset Acquisition:** The AP uses algorithmic trading bots to buy the required basket (e.g., BTC, ETH, SOL) on the open market.
+5. **Proof:** The AP proves they have the assets (using Proof of Reserve or Oracle attestation).
+6. **Minting:** Once confirmed, the Protocol mints the Index Tokens and sends them to the user.
+
+### Liability
+
+- **Responsibility:** The AP is fully liable for asset loss caused by negligence, theft, or mismanagement.
+- **Coverage:** They are required to maintain insurance or post collateral to cover this risk.
+
+---
+
+## 2. Issuer Network Service Standards
+
+The Issuer Network is the "referee" of the system. Members run validator nodes that enforce the rules.
+
+### Node Operations
+
+Validators must meet specific hardware and security standards:
+
+- **Uptime:** Nodes must stay online 99.9% of the time.
+- **Slashing:** Bad behavior has consequences. If a validator signs invalid transactions, goes offline too often, or tries to censor valid transactions, they face "Slashing" (confiscation of their staked tokens).
+
+### Compliance & Safety
+
+The Issuer Network also handles the compliance layer:
+
+- **Sanctions Screening:** Before a Mint/Redeem request is processed, nodes check the user's wallet against chain-analysis APIs (like Chainalysis or TRM Labs) to ensure no illicit activity is involved.
+- **Emergency Pause:** If there is extreme market volatility or a smart contract exploit is detected, the Network can "Pause" the protocol. This halts all minting and redeeming to protect user funds.
+
+---
+
+## 3. The Interface (The Website)
+
+The user interface (GUI) is operated by the "Panama GUI Operator" under license from IndexMaker Labs. It operates on a **"Passive Publisher"** model.
+
+### How the Interface Operates
+
+- **No Accounts:** The interface does not store user accounts or passwords.
+- **Non-Custodial:** It strictly functions as a portal. Users connect their own wallets (e.g., MetaMask).
+- **Public Data Only:** Prices and index composition are pulled from public blockchain data or decentralized oracles (like Chainlink). The Operator does not "create" prices.
+
+### Disclaimers
+
+The Terms of Service clearly state:
+
+\_The Interface Operator is \_ **not**\* a financial advisor, custodian, or exchange.
+
+- Users are interacting directly with the Smart Contracts at their own risk.
+
+---
+
+## 4. Operational Resilience
+
+This architecture creates a redundant, fail-safe system.
+
+- **No Single Failure Point:** The AP cannot move funds without the Issuer Network's permission.
+- **Random Oversight:** The process is governed by the random oversight of the Elected DAO.
+- **Decentralization:** By distributing the "effort" across independent, replaceable, and algorithmically selected participants, we remove regulatory choke points and ensure the system remains sufficiently decentralized.
