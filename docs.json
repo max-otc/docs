@@ -3,7 +3,7 @@
   "theme": "maple",
   "name": "IndexMaker",
   "colors": {
-    "primary": "#ffffff",
+    "primary": "#000000",
     "light": "#000000",
     "dark": "#ffffff"
   },
@@ -51,7 +51,7 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:contact@indexmaker.global"
       }
     ],
     "primary": {
@@ -74,9 +74,10 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/indexmakerlabs",
+      "github": "https://github.com/orgs/IndexMaker",
+      "telegram": "https://t.me/IndexMakerLabs",
+      "website": "https://www.indexmaker.global/"
     }
   },
   "description": "Docs",
