@@ -3,7 +3,7 @@
   "theme": "maple",
   "name": "IndexMaker",
   "colors": {
-    "primary": "#000000",
+    "primary": "#ffffff",
     "light": "#000000",
     "dark": "#ffffff"
   },
@@ -78,5 +78,10 @@
   "description": "Docs",
   "appearance": {
     "strict": false
+  },
+  "api": {
+    "playground": {
+      "display": "interactive"
+    }
   }
 }
