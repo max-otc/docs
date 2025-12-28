@@ -53,12 +53,7 @@
         "label": "Support",
         "href": "mailto:contact@indexmaker.global"
       }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
-    }
+    ]
   },
   "contextual": {
     "options": [
