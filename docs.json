@@ -7,7 +7,7 @@
     "light": "#000000",
     "dark": "#ffffff"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/images/favicon-96x96.png",
   "navigation": {
     "global": {
       "anchors": [
@@ -46,7 +46,7 @@
       }
     ]
   },
-  "logo": "/images/favicon-96x96.png",
+  "logo": "/images/index-47.svg",
   "navbar": {
     "links": [
       {
