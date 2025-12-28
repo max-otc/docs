@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
+  "theme": "maple",
   "name": "IndexMaker",
   "colors": {
     "primary": "#ffffff",
@@ -31,10 +31,10 @@
       {
         "tab": "Overview",
         "pages": [
-          "overview/untitled-page-2",
-          "overview/index-maker-standard-the-structure",
-          "overview/untitled-page",
-          "overview/untitled-page-1"
+          "why",
+          "structure",
+          "dao",
+          "custody"
         ]
       },
       {
@@ -79,5 +79,8 @@
       "linkedin": "https://linkedin.com/company/mintlify"
     }
   },
-  "description": "Docs"
+  "description": "Docs",
+  "appearance": {
+    "strict": false
+  }
 }
