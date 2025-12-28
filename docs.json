@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "IndexMaker",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#ffffff",
+    "light": "#000000",
+    "dark": "#ffffff"
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -46,10 +46,7 @@
       }
     ]
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
+  "logo": "/images/favicon-96x96.png",
   "navbar": {
     "links": [
       {
@@ -81,5 +78,6 @@
       "github": "https://github.com/mintlify",
       "linkedin": "https://linkedin.com/company/mintlify"
     }
-  }
+  },
+  "description": "Docs"
 }
