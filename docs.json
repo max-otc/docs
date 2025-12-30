@@ -32,9 +32,20 @@
         "tab": "Overview",
         "pages": [
           "why",
-          "structure",
-          "dao",
-          "custody"
+          {
+            "group": "Legal Protocol",
+            "pages": [
+              "structure",
+              "dao",
+              "custody"
+            ]
+          },
+          {
+            "group": "Technical Protocol",
+            "pages": [
+              "overview/untitled-page"
+            ]
+          }
         ]
       },
       {
