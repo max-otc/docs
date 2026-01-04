@@ -54,6 +54,10 @@
           "legal/terms-of-service",
           "legal/privacy-policy"
         ]
+      },
+      {
+        "tab": "Legacy",
+        "href": "https://psymm.gitbook.io/indexmaker"
       }
     ]
   },
