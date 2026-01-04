@@ -43,7 +43,8 @@
           {
             "group": "Technical Protocol",
             "pages": [
-              "overview/untitled-page"
+              "overview/untitled-page",
+              "overview/technical-protocol/v1-docs"
             ]
           }
         ]
@@ -54,10 +55,6 @@
           "legal/terms-of-service",
           "legal/privacy-policy"
         ]
-      },
-      {
-        "tab": "Legacy",
-        "href": "https://psymm.gitbook.io/indexmaker"
       }
     ]
   },
